@@ -36,6 +36,13 @@ where
         )
 	group by tconst
 	having count(1) > 1
-);
+)
 
+-- 3.4 Zoek de actrice met de langste naam.
+select *
+from names 
+where primaryprofession like '%actress%'
+order by length(primaryname) desc
+limit 1
 
+-- 3.5 Zoek de acteur met de meeste tijd tussen zijn eerste en laatste film.
